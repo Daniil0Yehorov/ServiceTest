@@ -20,8 +20,10 @@ public class SoapClient {
             BookService bookService = service.getPort(BookService.class);
 
             Book book= new Book("dadadad","Dadad");
-            String result = bookService.addBook(book);
+           String result = bookService.addBook(book);
             System.out.println("Результат: " + result);
+            System.out.println(bookService.getBook("dadadad"));
+            System.out.println(bookService.getBook("Book Title 2"));
         } catch (Exception e) {
             e.printStackTrace();
         }
